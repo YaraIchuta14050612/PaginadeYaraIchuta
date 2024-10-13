@@ -1,0 +1,131 @@
+.padre {
+    padding: 5px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "cont1 cont2 cont3"
+        "foot foot foot";
+}
+
+.padre .header {
+    grid-area: header;
+}
+
+.padre .nav {
+    grid-area: nav;
+}
+
+ 
+.padre .cont1 {
+    grid-area: cont1;
+}
+
+.padre .cont1 img{
+    width: 100%;
+}
+
+.padre .cont2 {
+    grid-area: cont2;
+}
+
+.padre .cont3 {
+    grid-area: cont3;
+}
+
+.padre .foot {
+    grid-area: foot;
+}
+
+@media screen and (max-width:700px) {
+    .padre {
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "cont1 cont1 cont1"
+        "cont2 cont2 cont3"
+        "foot foot foot";
+    }
+}
+
+@media screen and (max-width:400px) {
+    .padre {
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "cont1 cont1 cont1"
+        "cont2 cont2 cont2"
+        "cont3 cont3 cont3"
+        "foot foot foot";
+    }
+}
+
+
+.pie-pagina{
+    width: 100%;
+    background-color: #d0d3d4;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #000000;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #000000;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #000000;
+    margin-right: 10px;
+    background-color: #979a9a;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #7b7d7d;
+}
+.pie-pagina .grupo-2{
+    background-color: #979a9a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+
